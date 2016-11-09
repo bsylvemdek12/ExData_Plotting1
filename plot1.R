@@ -7,7 +7,7 @@ printPlot1 <- function(startDate = as.Date("2007/02/01"), endDate = as.Date("200
   colors = c("red")
   
   #load data
-  powerdata <- read.csv("household_power_consumption.txt", sep=";")
+  powerdata <- read.csv("household_power_consumption.txt", sep=";", header=TRUE, na.strings = "?")
   powerdata$Date = as.Date(powerdata$Date, "%d/%m/%Y")
   powerdatatwodays <- powerdata[powerdata$Date >= startDate & powerdata$Date <= endDate,]
   
