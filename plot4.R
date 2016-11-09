@@ -44,6 +44,6 @@ printPlot4 <- function(startDate = as.Date("2007/02/01"), endDate = as.Date("200
   lines(powerdatatwodays$DateTime,powerdatatwodays$Global_reactive_power, type="l")
   
   #print
-  dev.copy(png, file = "plot4.png")
+  dev.copy(png, file = "plot4.png", width=480, height=480)
   dev.off()
 }

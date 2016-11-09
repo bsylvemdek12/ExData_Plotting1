@@ -27,6 +27,6 @@ printPlot3 <- function(startDate = as.Date("2007/02/01"), endDate = as.Date("200
          cex=0.85)
   
   #print
-  dev.copy(png, file = "plot3.png")
+  dev.copy(png, file = "plot3.png", width=480, height=480)
   dev.off()
 }

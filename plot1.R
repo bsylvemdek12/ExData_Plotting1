@@ -17,6 +17,6 @@ printPlot1 <- function(startDate = as.Date("2007/02/01"), endDate = as.Date("200
        main="Global Active Power")
   
   #print
-  dev.copy(png, file = "plot1.png")
+  dev.copy(png, file = "plot1.png", width=480, height=480)
   dev.off()
 }

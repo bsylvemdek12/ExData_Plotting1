@@ -15,6 +15,6 @@ printPlot2 <- function(startDate = as.Date("2007/02/01"), endDate = as.Date("200
   lines(powerdatatwodays$DateTime,powerdatatwodays$Global_active_power, type="l")
   
   #print
-  dev.copy(png, file = "plot2.png")
+  dev.copy(png, file = "plot2.png", width=480, height=480)
   dev.off()
 }
