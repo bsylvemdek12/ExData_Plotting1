@@ -1,8 +1,7 @@
 printPlot1 <- function(startDate = as.Date("2007/02/01"), endDate = as.Date("2007/02/02"))
 {
   #clear plots
-  plot.new()
-  frame()
+  dev.off(dev.list()["RStudioGD"])
   
   #set color
   colors = c("red")

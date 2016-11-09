@@ -1,8 +1,7 @@
 printPlot2 <- function(startDate = as.Date("2007/02/01"), endDate = as.Date("2007/02/02"))
 {
   #Clear plot area
-  plot.new()
-  frame()
+  dev.off(dev.list()["RStudioGD"])
   
   #Load data
   powerdata <- read.csv("household_power_consumption.txt", sep=";")

@@ -1,8 +1,7 @@
 printPlot4 <- function(startDate = as.Date("2007/02/01"), endDate = as.Date("2007/02/02"))
 {
   #Clear any existing plots
-  plot.new()
-  frame()
+  dev.off(dev.list()["RStudioGD"])
   
   #setup columns and margins
   par(mfrow = c(2,2), mar=c(3,4,1,1))
@@ -36,7 +35,9 @@ printPlot4 <- function(startDate = as.Date("2007/02/01"), endDate = as.Date("200
   legend("topright", col=c("black", "red", "blue"), 
          legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),
          lty=c(1,1,1),
-         lwd=c(2.5,2.5,2.5))
+         lwd=c(2.5,2.5,2.5),
+         bty="n",
+         cex=0.75)
   
   #plot global reactive power
   plot(powerdatatwodays$DateTime,powerdatatwodays$Global_reactive_power, type="n", xlab="", ylab="Global_reactive_power")

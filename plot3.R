@@ -1,8 +1,7 @@
 printPlot3 <- function(startDate = as.Date("2007/02/01"), endDate = as.Date("2007/02/02"))
 {
   #Clear existing plots
-  plot.new()
-  frame()
+  dev.off(dev.list()["RStudioGD"])
   
   #load data and setup date/time columns
   powerdata <- read.csv("household_power_consumption.txt", sep=";")
@@ -24,7 +23,8 @@ printPlot3 <- function(startDate = as.Date("2007/02/01"), endDate = as.Date("200
   legend("topright", col=c("black", "red", "blue"), 
          legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),
          lty=c(1,1,1),
-         lwd=c(2.5,2.5,2.5))
+         lwd=c(2.5,2.5,2.5),
+         cex=0.75)
   
   #print
   dev.copy(png, file = "plot3.png")
