@@ -24,7 +24,7 @@ printPlot3 <- function(startDate = as.Date("2007/02/01"), endDate = as.Date("200
          legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),
          lty=c(1,1,1),
          lwd=c(2.5,2.5,2.5),
-         cex=0.75)
+         cex=0.85)
   
   #print
   dev.copy(png, file = "plot3.png")
