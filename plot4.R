@@ -37,7 +37,7 @@ printPlot4 <- function(startDate = as.Date("2007/02/01"), endDate = as.Date("200
          lty=c(1,1,1),
          lwd=c(2.5,2.5,2.5),
          bty="n",
-         cex=0.85)
+         cex=0.90)
   
   #plot global reactive power
   plot(powerdatatwodays$DateTime,powerdatatwodays$Global_reactive_power, type="n", xlab="", ylab="Global_reactive_power")
